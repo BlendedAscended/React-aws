@@ -1,0 +1,25 @@
+{
+  "name": "app",
+  "workspaces": [
+    "packages/*",
+    "services/*"
+  ],
+  "lint-staged": {
+    "*": "prettier --write --ignore-unknown --config config/.prettierrc.json"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "develop": "turbo run develop --no-cache --parallel --continue",
+    "deploy": "turbo run deploy",
+    "postinstall": "husky install config/husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.2.0",
+    "@commitlint/config-conventional": "^17.2.0",
+    "aws-cdk": "^2.51.1",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "turbo": "^1.6.3"
+  }
+}

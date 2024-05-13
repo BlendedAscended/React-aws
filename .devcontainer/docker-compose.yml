@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    init: true
+    volumes:
+      - ..:/workspace:cached
+      - $HOME/.aws/credentials:/home/me/.aws/credentials:ro
+      - $HOME/.aws/config:/home/me/.aws/config:ro
+    command: sleep infinity

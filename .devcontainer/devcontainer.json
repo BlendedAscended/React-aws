@@ -1,0 +1,27 @@
+{
+  "name": "Serverless App",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "prettier.configPath": "config/.prettierrc.json"
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "skyapps.fish-vscode",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "csstools.postcss"
+      ]
+    }
+  },
+  "postCreateCommand": "npm i",
+  "remoteUser": "me",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/git-lfs:1": {},
+    "ghcr.io/devcontainers/features/aws-cli:1": {}
+  }
+}
